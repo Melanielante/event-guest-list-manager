@@ -1,12 +1,12 @@
 //grabbing elements
 let guestForm = document.querySelector('#guest-form');
-console.log (guestForm);
+
 
 let formRow = document.querySelector('#form-row');
-console.log(formRow);
+
 
 let guestList = document.querySelector('#guest-list');
-console.log(guestList);
+
 
 //stop the page from refreshing by using prevent default
 guestForm.addEventListener("submit", function(event) {
@@ -18,11 +18,6 @@ guestForm.addEventListener("submit", function(event) {
     let lName = document.querySelector('#guest-lname-input').value;
     let category = document.querySelector('#guest-category').value;
 
-
-    console.log("Form submitted!");
-    console.log(fName);
-    console.log(lName);
-    console.log(category);
 
     //  creating  a new div element for the guest card
 
