@@ -39,6 +39,13 @@ let categoryP = document.createElement('p');
 categoryP.textContent = category;
 guestCard.appendChild(categoryP);
 
+//creating a delete button
+let deleteButton = document.createElement('button');
+deleteButton.addEventListener('click', () =>{
+    guestCard.remove();
+} );
+guestCard.appendChild(deleteButton);
+
 //adding  guestcard to the page
 guestList.appendChild(guestCard);
 

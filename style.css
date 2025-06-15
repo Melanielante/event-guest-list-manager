@@ -78,11 +78,11 @@ h1 {
     font-size: 0.9rem;
 }
 .guest-card button:hover {
-    background-color: #f8a5b1;
+    background-color: #7c4049;
 }
 /*category tags */
 .friend-tag {
-    background-color: #d4c1f0;
+    background-color: #dbd2e9;
 }
 .family-tag {
     background-color: #f3c9ff;
