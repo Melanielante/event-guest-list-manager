@@ -41,6 +41,7 @@ guestCard.appendChild(categoryP);
 
 //creating a delete button
 let deleteButton = document.createElement('button');
+deleteButton.textContent = 'DEL';
 deleteButton.addEventListener('click', () =>{
     guestCard.remove();
 } );
