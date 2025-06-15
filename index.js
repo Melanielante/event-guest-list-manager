@@ -1,0 +1,49 @@
+//grabbing elements
+let guestForm = document.querySelector('#guest-form');
+console.log (guestForm);
+
+let formRow = document.querySelector('#form-row');
+console.log(formRow);
+
+let guestList = document.querySelector('#guest-list');
+console.log(guestList);
+
+//stop the page from refreshing by using prevent default
+guestForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    //grabbing input values
+
+    let fName = document.querySelector('#guest-fname-input').value;
+    let lName = document.querySelector('#guest-lname-input').value;
+    let category = document.querySelector('#guest-category').value;
+
+
+    console.log("Form submitted!");
+    console.log(fName);
+    console.log(lName);
+    console.log(category);
+
+    //  creating  a new div element for the guest card
+
+let guestCard = document.createElement('div');
+guestCard.classList.add('guest-card');
+
+//creating name paragraph
+let nameP = document.createElement('p');
+nameP.textContent = `${fName} ${lName}`;
+guestCard.appendChild(nameP);
+
+//creating the category
+let categoryP = document.createElement('p');
+categoryP.textContent = category;
+guestCard.appendChild(categoryP);
+
+//adding  guestcard to the page
+guestList.appendChild(guestCard);
+
+// reseting the form
+guestForm.reset();
+
+})
+
