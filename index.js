@@ -49,8 +49,28 @@ guestCard.appendChild(deleteButton);
 //adding  guestcard to the page
 guestList.appendChild(guestCard);
 
+//creating rsvp toggle
+let rsvpButton = document.createElement('button');
+rsvpButton.textContent = 'RSVP: Not Attending';
+rsvpButton.classList.add('rsvp-btn', 'rsvp-declined');
+
+rsvpButton.addEventListener('click', function () {
+    if (rsvpButton.classList.contains ('rsvp-declined')) {
+        rsvpButton.classList.remove('rsvp-declined');
+        rsvpButton.classList.add('rsvp-attending');
+        rsvpButton.textContent = 'RSVP: Attending';
+        
+    }
+    else {
+        rsvpButton.classList.remove('rsvp-attending');
+        rsvpButton.classList.add('rsvp-declined');
+        rsvpButton.textContent = 'RSVP: Not Attending';
+    }
+});
+guestCard.appendChild(rsvpButton);
+
 // reseting the form
 guestForm.reset();
 
-})
+});
 
